@@ -18,7 +18,7 @@ def _main():
 
     annotation_path = "../drive/MyDrive/peddet/ped-data/train.txt"
     log_dir = 'logs/000/'
-    classes_path = 'model_data/ped_classes.txt'
+    classes_path = 'model_data/traffic_classes.txt'
     anchors_path = 'model_data/yolo_anchors.txt'
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
@@ -32,7 +32,7 @@ def _main():
             freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
     else:
         model = create_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path='../drive/MyDrive/peddet/yolo_weights.h5') # make sure you know what you freeze
+            freeze_body=2, weights_path='../drive/MyDrive/peddet/darknet53_weights.h5') # make sure you know what you freeze
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
