@@ -21,9 +21,13 @@ from keras.utils import multi_gpu_model
 class YOLO(object):
     _defaults = {
         #"model_path": 'model_data/yolo.h5',
-        "model_path": '../dl/trained_weights_final.h5',
+        #"model_path": '../drive/MyDrive/peddet/yolo_weights.h5',
+        "model_path": '../drive/MyDrive/peddet/darknet53_weights.h5',
+        #"model_path": '../dl/trained_weights_final.h5',
         "anchors_path": 'model_data/yolo_anchors.txt',
-        "classes_path": 'model_data/ped_classes.txt',
+        #"classes_path": 'model_data/ped_classes.txt',
+        #"classes_path": 'model_data/coco_classes.txt',
+        "classes_path": 'model_data/traffic_classes.txt',
         "score" : 0.3,
         "iou" : 0.45,
         "model_image_size" : (416, 416),

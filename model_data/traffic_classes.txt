@@ -1,0 +1,5 @@
+mypedestrian
+mycyclist
+mycar
+mytruck
+myvan
